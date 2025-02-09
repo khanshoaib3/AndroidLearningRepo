@@ -183,6 +183,7 @@ fun DogItem(
     }
 }
 
+// State Hoisting
 @Composable
 fun DogItemButton(expanded: Boolean, onClick: () -> Unit, modifier: Modifier = Modifier) {
     IconButton(onClick = onClick, modifier = modifier) {
