@@ -56,7 +56,6 @@ class MainActivity : ComponentActivity() {
                         )
                 ) {
                     val windowSize = calculateWindowSizeClass(this)
-                    Log.d("MAINACTIVITY", "${windowSize.widthSizeClass}")
                     ReplyApp(windowSize = windowSize.widthSizeClass)
                 }
             }
@@ -70,6 +69,26 @@ fun ReplyAppCompactPreview() {
     ReplyTheme {
         Surface {
             ReplyApp(WindowWidthSizeClass.Compact)
+        }
+    }
+}
+
+@Preview(showBackground = true, widthDp = 700)
+@Composable
+fun ReplyAppMediumPreview() {
+    ReplyTheme {
+        Surface {
+            ReplyApp(windowSize = WindowWidthSizeClass.Medium)
+        }
+    }
+}
+
+@Preview(showBackground = true, widthDp = 1000)
+@Composable
+fun ReplyAppExpandedPreview() {
+    ReplyTheme {
+        Surface {
+            ReplyApp(windowSize = WindowWidthSizeClass.Expanded)
         }
     }
 }
